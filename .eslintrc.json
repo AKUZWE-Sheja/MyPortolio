@@ -1,3 +1,35 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "react/no-unescaped-antites" : "off",
+    "@typescript-eslint/quotes" : "off",
+    "quotes" : [0],
+    "avoidEscape" : 0,
+    "allowTemplateLiterals" : 0,
+    "no-useless-escape" : 0
+  }
 }
+
+// "extends": "next/core-web-vitals":
+
+// This extends the Next.js core web vitals configuration, which includes a set of rules specifically aimed at improving performance, accessibility, and overall best practices in Next.js applications. It enforces stricter rules to ensure that the web app performs well on the Core Web Vitals metrics.
+// "rules": { ... }: This section overrides specific ESLint rules or turns them off. Here’s what each rule does:
+
+// "react/no-unescaped-entities": "off":
+
+// This rule, if enabled, prevents the use of unescaped entities (e.g., <, >, &) in JSX, which can cause rendering issues. Setting it to "off" disables this rule, allowing you to use characters like < and > directly in your JSX.
+// "@typescript-eslint/quotes": "off":
+
+// This disables the rule that enforces consistent use of single or double quotes in TypeScript files.
+// "quotes": [0]:
+
+// This rule checks the usage of quotes in the codebase (single vs. double). Setting it to [0] disables this rule, allowing any type of quote style.
+// "avoidEscape": 0:
+
+// This setting would normally be used within the quotes rule to allow quotes of the "wrong" type if they avoid having to use backslashes to escape quotes. Setting it to 0 or turning it off doesn't change the linting rules as it is already off.
+// "allowTemplateLiterals": 0:
+
+// This would be used to allow template literals instead of quotes. Setting it to 0 means no preference or enforcement.
+// "no-useless-escape": 0:
+
+// This rule normally disallows unnecessary escape characters (e.g., escaping a space, which is unnecessary). Setting it to 0 turns off this check, meaning it won’t warn you if you add extra escape characters.

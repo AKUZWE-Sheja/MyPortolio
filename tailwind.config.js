@@ -1,17 +1,55 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
+    darkMode: ["class"],
+    content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  prefix: "",
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
+	container: {
+		center: true,
+		padding: "2rem",
+		screens: {
+			"sm": "640px",
+			"md": "768px",
+			"lg": "960px",
+			"xl": "1200px",
+		},
+	},
+	fontFamily: {
+		primary: "var(--font-jetbrainsMono)",
+	},
+  	extend: {
+		keyframes: {
+			"acordion-down": {
+				from: { height: "0"},
+				to: { height: "var(--radix-acordion-content-height)"},
+			},
+			"acordion-up": {
+				from: { height:  "var(--radix-acordion-content-height)"},
+				to: { height:  "0"},
+			},
+		},
+		animation: {
+			"acordion-down": "accordion-down 0.2s ease-out",
+			"acordion-up": "accordion-up  0.2s ease-out",
+		},
+  		colors: {
+  			primary: "#1c1c22",
+			accent: {
+				DEFAULT: "#00ff99",
+				hover: "#00e187",
+				
+			}
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		}
+  	}
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
