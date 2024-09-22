@@ -6,7 +6,10 @@ import {
   FaJs, 
   FaReact, 
   FaFigma, 
-  FaNodeJs 
+  FaNodeJs,
+  FaPython,
+  FaPhp,
+  FaJava
 } from "react-icons/fa";
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
@@ -140,8 +143,22 @@ const skills = {
     },
     {
       icon: <FaFigma/>,
-      name: "figma ",
+      name: "figma",
     },
+    {
+      icon: <FaPython/>,
+      name: "python",
+    },
+    {
+      icon: <FaPhp/>,
+      name: "php",
+    },
+    {
+      icon: <FaJava/>,
+      name: "java ",
+    },
+    
+
   ]
 }
 
