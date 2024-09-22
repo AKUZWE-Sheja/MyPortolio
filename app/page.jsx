@@ -15,10 +15,10 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Software Developer</span>
             <h1 className="h1 mb-6">
-              Hello, I'm <br /> <span className="text-accent">Akuzwe Sheja Edwige</span>
+              Hello, I&apos;m <br /> <span className="text-accent">Akuzwe Sheja Edwige</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I'm an ambitious developer and visual designer with a passion
+              I&apos;m an ambitious developer and visual designer with a passion
               for technology, leadership, and social impact.
             </p>
             {/* btn & socials */}
