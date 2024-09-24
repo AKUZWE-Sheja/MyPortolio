@@ -19,7 +19,7 @@ const projects = [
     category: "Frontend, UI/UX Design, Logo Design",
     title: "Oculus",
     desccription: "Oculus empowers women-led artistic businesses by enhancing the visibility and accessibility of locally crafted products. I designed the logo, created the website prototype using Figma, and developed the frontend using React.js.",
-    stack: [{ name: "ReactJs" }, { name: "Css 3"}, { name: " Illustrator" }, { name: "Fimga" }],
+    stack: [{ name: "ReactJs" }, { name: "Css 3"}, { name: " Illustrator" }, { name: "Figma" }],
     image: '/assets/oc.png',
     live: "",
     github: "",
@@ -37,8 +37,8 @@ const projects = [
   {
     num: "03",
     category: "UI/UX Design",
-    title: "Vivaa",
-    desccription: " I worked on Vivaa -a mental health app that connects users with therapists and fellow users for support and guidance- in its pitching stage . I contributed to the Figma designs and pitched the concept, focusing on creating a safe and supportive digital space for mental health.",
+    title: "Viva",
+    desccription: " I worked on Viva -a mental health app that connects users with therapists and fellow users for support and guidance- in its pitching stage . I contributed to the Figma designs and pitched the concept, focusing on creating a safe and supportive digital space for mental health.",
     stack: [{ name: " Figma" }],
     image: '/assets/vivaa.png',
     live: "",
@@ -72,7 +72,7 @@ const projects = [
     stack: [{ name: "Html5" }, { name: "Css 3"}, { name: " Figma" }],
     image: '/assets/sweetspot.png',
     live: "",
-    github: "",
+    github: "https://github.com/AKUZWE-Sheja/bliss.git",
   },
 ]
 

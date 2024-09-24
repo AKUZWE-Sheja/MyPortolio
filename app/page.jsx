@@ -27,7 +27,6 @@ const Home = () => {
                 href="/cv.pdf" 
                 download="Akuzwe_Sheja_Edwige_CV.pdf" // Name of the downloaded file
               >
-
               <Button
                 variant="outline"
                 sizes="lg"

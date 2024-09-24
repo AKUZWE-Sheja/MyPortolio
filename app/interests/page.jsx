@@ -2,52 +2,58 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import Image from 'next/image'; 
 import "swiper/css";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import WorkSliderBtns from "@/components/WorkSlideBtns"; 
 
-// Data for poetry, publications, and certificates
 const poetry = {
   title: "Dignity In Words",
   description: "Expressing thoughts and emotions through poetic works that reflect life's beauty and struggles.",
   items: [
     { 
-      fieldName: "Crimson", 
-      image: '/assets/crimson.png',
+      fieldName: "Heart Warmth", 
+      image: '/assets/girly.png',
     },
     { 
       fieldName: "The Storm Within", 
       image: '/assets/storm.png',
     },
     { 
-      fieldName: "Crimson", 
-      image: '/assets/crimson.png',
+      fieldName: "Shadow Play", 
+      image: '/assets/shadow.png',
     },
     { 
       fieldName: "The Storm Within", 
       image: '/assets/storm.png',
+    },
+    { 
+      fieldName: "A Future So Bright", 
+      image: '/assets/future.png',
     },
   ],
 };
 
 const publications = {
-  title: "Published Articles",
-  description: "Articles and papers covering topics in technology, education, and social impact.",
+  title: "Publications",
+  description: "Articles, papers and blogs covering topics in technology, education, and social impact.",
   items: [
     { 
-      fieldName: "The Power of VR in Education", 
-      image: '/assets/crimson.png',
+      fieldName: "Enhancing VR Accessibility Through Audio and Haptic Feedback for Visually Impaired Individuals", 
+      image: '/assets/vr.png',
     },
     { 
-      fieldName: "Empowering Women through Technology", 
-      image: '/assets/crimson.png',
+      fieldName: "KWIBUKA 30: Commemoration at Nyanza-Kicukiro", 
+      image: '/assets/remember.png',
     },
     { 
-      fieldName: "Sustainable Tech Innovations", 
-      image: '/assets/crimson.png',
+      fieldName: "Feedback Without Fiasco: Your Guide To Mastering Constructive Criticism", 
+      image: '/assets/cc.webp',
+    },
+    { 
+      fieldName: "Human Flourishing: What is The 'Ego'?", 
+      image: '/assets/hf.webp',
     },
   ],
 };
@@ -57,16 +63,32 @@ const certificates = {
   description: "Professional certifications and achievements in various technical and non-technical domains.",
   items: [
     { 
-      fieldName: "Google Analytics", 
-      image: '/assets/crimson.png',
+      fieldName: "Intro to Data Science", 
+      image: '/assets/certificates/intro.png',
     },
     { 
-      fieldName: "AWS Certified Developer", 
-      image: '/assets/crimson.png',
+      fieldName: "Data Science for Good Course", 
+      image: '/assets/certificates/ds.png',
     },
     { 
-      fieldName: "Full-Stack Developer", 
-      image: '/assets/crimson.png',
+      fieldName: "Intro to Machine Learning Course", 
+      image: '/assets/certificates/ml.png',
+    },
+    { 
+      fieldName: "Basic Neural Nets Course", 
+      image: '/assets/certificates/neural.png',
+    },
+    { 
+      fieldName: "Ideation & Prototyping Certificate", 
+      image: '/assets/certificates/I_P.png',
+    },
+    { 
+      fieldName: "Creating Virtual Worlds With Honors", 
+      image: '/assets/certificates/SoH.png',
+    },
+    { 
+      fieldName: "Sololearn Python Developer Certificate", 
+      image: '/assets/certificates/solo.png',
     },
   ],
 };
@@ -97,7 +119,7 @@ const Interests = () => {
             {/* poetry */}
             <TabsContent value="poetry" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{poetry.title}</h3>
+                <h3 className="text-4xl font-bold"><a href="https://www.instagram.com/dignityinwords/">{poetry.title}</a></h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{poetry.description}</p>
                 <ScrollArea className="h-[500px]">
                   <ul>
@@ -112,7 +134,7 @@ const Interests = () => {
                             <Image 
                               src={item.image}
                               fill
-                              className="object-cover"
+                              className="object-contain"
                               alt={item.fieldName}  
                             />
                           </div>
@@ -128,7 +150,7 @@ const Interests = () => {
             {/* publications */}
             <TabsContent value="publications" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{publications.title}</h3>
+                <h3 className="text-4xl font-bold"><a href="https://substack.com/@dignityinwords">{publications.title}</a></h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{publications.description}</p>
                 <ScrollArea className="h-[500px]">
                   <ul>
@@ -143,7 +165,7 @@ const Interests = () => {
                             <Image 
                               src={item.image}
                               fill
-                              className="object-cover"
+                              className="object-contain"
                               alt={item.fieldName}  
                             />
                           </div>
@@ -174,7 +196,7 @@ const Interests = () => {
                             <Image 
                               src={item.image}
                               fill
-                              className="object-cover"
+                              className="object-contain"
                               alt={item.fieldName}  
                             />
                           </div>

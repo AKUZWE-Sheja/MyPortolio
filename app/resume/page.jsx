@@ -64,7 +64,7 @@ const experience = {
   items: [
     {
       company: "The Green Protector",
-      position: "Env ironment Education Research & Content Dvlptment Intern",
+      position: "Environment Education Research & Content Development Intern",
       duration: "Summer 2024 - Present",
     },
     {
@@ -97,7 +97,7 @@ const education = {
     },
     {
       institution: "GirlsWhoCode",
-      degree: "Data Science Certificate",
+      degree: "Data Science Certificates",
       duration: "2024",
     },
     {
