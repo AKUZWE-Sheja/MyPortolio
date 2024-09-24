@@ -188,7 +188,7 @@ const Interests = () => {
                     {certificates.items.map((item, index) => {
                       return (
                         <SwiperSlide key={index} className="w-full mb-8">
-                        <h3 className="mb-2  text-accent">{item.fieldName}</h3>
+                        <h3 className="text-accent">{item.fieldName}</h3>
                         <div className="h-[480px] relative group flex justify-center items-center">
                           {/* Image */}
                           <div className="relative w-[50%] h-full">
