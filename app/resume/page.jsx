@@ -88,7 +88,7 @@ const education = {
   items: [
     {
       institution: "Rwanda Coding Academy",
-      degree: "Software Programming & Embedded Systems Diploma",
+      degree: "Highschool Diploma",
       duration: "2022 - Present",
     },
     {
