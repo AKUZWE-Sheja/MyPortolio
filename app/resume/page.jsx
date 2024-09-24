@@ -97,7 +97,7 @@ const education = {
     },
     {
       institution: "GirlsWhoCode",
-      degree: "Python Developer Certificate",
+      degree: "Data Science Certificate",
       duration: "2024",
     },
     {
