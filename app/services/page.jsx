@@ -7,7 +7,7 @@ const services = [
   {
     num: '01',
     title: 'Web and Mobile Development',
-    description: "Creating responsive and user-friendly web applications and mobile apps tailored to meet your business needs. Leveraging the latest technologies to ensure optimal performance and seamless user experiences.",
+    description: "Creating responsive and user-friendly web applications and mobile apps tailored to meet your personal & business needs. Leveraging the latest technologies to ensure optimal performance and seamless user experiences.",
     href: '',
   },
   {
@@ -24,11 +24,24 @@ const services = [
   },
   {
     num: '04',
-    title: 'Search Engine Optimization (SEO)',
-    description: "Optimizing your website to improve visibility on search engines. I employ best practices and strategies to enhance organic traffic, ensuring your site ranks higher and reaches a broader audience.",
+    title: 'Project Management & Coordination',
+    description: "Providing structured project management and coordination services to ensure successful project execution. I focus on planning, scheduling, and communication to keep your projects on track, within scope, and within budget.",
     href: '',
   },
-]
+  {
+    num: '05',
+    title: 'Technical Consulting & Advisory',
+    description: "Offering expert advice and guidance on technology choices, development strategies, and best practices to help you achieve your business objectives. My consulting services are tailored to align your technical needs with your business goals.",
+    href: '',
+  },
+  {
+    num: '06',
+    title: 'Content Creation & Technical Writing',
+    description: "Creating clear, engaging, and informative content for your digital platforms. I specialize in technical writing, documentation, and creating content that resonates with your audience and enhances your online presence.",
+    href: '',
+  },
+];
+
 
 import { motion } from "framer-motion";
 

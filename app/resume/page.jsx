@@ -12,11 +12,11 @@ import {
   FaJava
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiArduino } from "react-icons/si";
 
 const about = {
   title: "About Me",
-  description: "Full-stack developer passionate about creating efficient and impactful software solutions.",
+  description: "A dedicated full-stack developer with a passion for building efficient, user-centric software solutions that drive innovation and growth. I am always eager to take on new challenges and learn from each experience.",
   info: [
     { 
       fieldName: "Name", 
@@ -52,20 +52,19 @@ const about = {
     },
     { 
       fieldName: "Languages", 
-      fieldValue: "Kinyarwanda, English, French, Kiswahili" 
+      fieldValue: "Kinyarwanda, English, French, Kiswahili, Chinese" 
     },
   ],
 };
 
-
 const experience = {
   icon: '/assets/resume/badge.svg',
   title: 'My experience',
-  description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+  description: 'A brief overview of my professional journey, showcasing my expertise in development, design, and community service.',
   items: [
     {
       company: "The Green Protector",
-      position: "Env. Ed. Research & Content Dvlpt. Intern",
+      position: "Env ironment Education Research & Content Dvlptment Intern",
       duration: "Summer 2024 - Present",
     },
     {
@@ -84,12 +83,17 @@ const experience = {
 const education = {
   icon: '/assets/resume/cap.svg',
   title: 'My education',
-  description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+  description: 'My academic background, which has equipped me with the technical skills and knowledge needed for success in the tech industry.',
   items: [
     {
       institution: "Rwanda Coding Academy",
-      degree: "Highschool Diploma",
+      degree: "Software Programming & Embedded Systems Diploma",
       duration: "2022 - Present",
+    },
+    {
+      institution: "CODE University of Applied Sciences",
+      degree: "Ideation & Prototyping Certificate",
+      duration: "2024",
     },
     {
       institution: "GirlsWhoCode",
@@ -111,7 +115,7 @@ const education = {
 
 const skills = {
   title: "My skills",
-  description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+  description: "A comprehensive set of technical skills developed through diverse projects and hands-on experience.",
   skillList: [
     {
       icon: <FaHtml5/>,
@@ -138,16 +142,20 @@ const skills = {
       name: "tailwind.css",
     },
     {
+      icon: <SiArduino/>,
+      name: "arduino",
+    },
+    {
+      icon: <FaPython/>,
+      name: "python",
+    },
+    {
       icon: <FaNodeJs/>,
       name: "node.js",
     },
     {
       icon: <FaFigma/>,
       name: "figma",
-    },
-    {
-      icon: <FaPython/>,
-      name: "python",
     },
     {
       icon: <FaPhp/>,
@@ -157,8 +165,6 @@ const skills = {
       icon: <FaJava/>,
       name: "java ",
     },
-    
-
   ]
 }
 
@@ -207,7 +213,7 @@ const Resume = () => {
                         className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                       >
                         <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
+                        <h3 className="text-xl max-w-[3000px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
                         <div className="flex items-center gap-3">
                           {/*dot  */}
                           <span className="w-[6px] h-[6px] rounded-full bg-accent "></span>
@@ -234,7 +240,7 @@ const Resume = () => {
                         className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                       >
                         <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+                        <h3 className="text-xl max-w-[300px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
                         <div className="flex items-center gap-3">
                           {/*dot  */}
                           <span className="w-[6px] h-[6px] rounded-full bg-accent "></span>
@@ -282,8 +288,8 @@ const Resume = () => {
             <TabsContent value="about" className="w-full text-center xl:text-left">
             <div className="flex flex-col gap-[30px]">
               <h3 className="text-4xl font-bold">{about.title}</h3>
-              <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 ">{about.description}</p>
-              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+              <p className="max-w-[800px] text-white/60 mx-auto xl:mx-0 ">{about.description}</p>
+              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[800px] mx-auto xl:mx-0">
                 {about.info.map((item, index) => {
                   return (
                   <li 
