@@ -38,7 +38,7 @@ const projects = [
     num: "03",
     category: "UI/UX Design",
     title: "Viva",
-    desccription: " I worked on Viva -a mental health app that connects users with therapists and fellow users for support and guidance- in its pitching stage . I contributed to the Figma designs and pitched the concept, focusing on creating a safe and supportive digital space for mental health.",
+    desccription: "I worked on Viva -a mental health app that connects users with therapists and fellow users for support and guidance- in its pitching stage . I contributed to the Figma designs and pitched the concept, focusing on creating a safe and supportive digital space for mental health.",
     stack: [{ name: " Figma" }],
     image: '/assets/vivaa.png',
     live: "",
