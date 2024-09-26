@@ -16,30 +16,41 @@ const info = [
 
 const Contact = () => {
   const [status, setStatus] = useState('');
+  const [formData, setFormData] = useState({
+    firstname: '',
+    lastname: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target); 
-
-    const data = {
-      firstname: formData.get("firstname"),
-      lastname: formData.get("lastname"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      service: formData.get("service"),
-      message: formData.get("message"),
-    };
 
     try {
-      const response = await fetch('/api/route', {
+      const response = await fetch('/api/sendEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         setStatus('Message sent successfully!');
-        console.log('Received data:', { firstname, lastname, email, phone, service, message });
+        // Clear the form fields
+        setFormData({
+          firstname: '',
+          lastname: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
       } else {
         setStatus('Failed to send message. Please try again later.');
       }
@@ -67,13 +78,13 @@ const Contact = () => {
               <p className="text-white/60">Feel free to reach out for any inquiries.</p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input name="firstname" type="text" placeholder="First name" required />
-                <Input name="lastname" type="text" placeholder="Last name" required />
-                <Input name="email" type="email" placeholder="Email address" required />
-                <Input name="phone" type="tel" placeholder="Phone number" required />
+                <Input name="firstname" type="text" placeholder="First name" value={formData.firstname} onChange={handleChange} required />
+                <Input name="lastname" type="text" placeholder="Last name" value={formData.lastname} onChange={handleChange} required />
+                <Input name="email" type="email" placeholder="Email address" value={formData.email} onChange={handleChange} required />
+                <Input name="phone" type="tel" placeholder="Phone number" value={formData.phone} onChange={handleChange} required />
               </div>
               {/* select */}
-              <Select name="service">
+              <Select name="service" value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
@@ -88,7 +99,7 @@ const Contact = () => {
                 </SelectContent>
               </Select>
               {/* textarea */}
-              <Textarea name="message" className="h-[200px]" placeholder="Type your message here." required />
+              <Textarea name="message" className="h-[200px]" placeholder="Type your message here." value={formData.message} onChange={handleChange} required />
               {/* btn */}
               <Button size="md" className="max-w-40">
                 Send message
